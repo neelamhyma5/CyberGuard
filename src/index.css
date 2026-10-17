@@ -1,0 +1,232 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-dark: #030712;
+    --surface-dark: #070e24;
+    --border-dark: rgba(0, 245, 255, 0.16);
+    --cyan-glow: #00f5ff;
+    --indigo-glow: #6366f1;
+    --emerald-glow: #10b981;
+  }
+
+  body {
+    background-color: #030712;
+    color: #f1f5f9;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+  }
+}
+
+/* Futuristic Cyber Grid with Neon Depth */
+.cyber-grid-bg {
+  background-image: 
+    radial-gradient(circle at 50% 0%, rgba(0, 245, 255, 0.14), transparent 60%),
+    radial-gradient(circle at 80% 40%, rgba(99, 102, 241, 0.1), transparent 50%),
+    linear-gradient(to right, rgba(0, 245, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 245, 255, 0.035) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 40px 40px, 40px 40px;
+}
+
+/* Glassmorphic Cyber Surfaces with Luminescent Hairstyle Borders */
+.cyber-card {
+  background: linear-gradient(135deg, rgba(8, 16, 36, 0.8) 0%, rgba(5, 10, 24, 0.92) 100%);
+  border: 1px solid rgba(0, 245, 255, 0.15);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.45);
+}
+
+.cyber-card-active {
+  background: linear-gradient(135deg, rgba(0, 245, 255, 0.12) 0%, rgba(10, 22, 50, 0.95) 100%);
+  border-color: rgba(0, 245, 255, 0.65);
+  box-shadow: 0 0 35px -5px rgba(0, 245, 255, 0.35);
+}
+
+/* Luminous Glowing Effects */
+.cyber-glow-cyan {
+  box-shadow: 0 0 40px -5px rgba(0, 245, 255, 0.3);
+}
+
+.cyber-glow-indigo {
+  box-shadow: 0 0 40px -5px rgba(99, 102, 241, 0.3);
+}
+
+/* Animated Shimmer Text with Cyber Metallic Sheen */
+.text-shimmer {
+  background: linear-gradient(
+    90deg,
+    #ffffff 0%,
+    #00f5ff 25%,
+    #a5b4fc 50%,
+    #00f5ff 75%,
+    #ffffff 100%
+  );
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: text-shimmer 6s linear infinite;
+}
+
+@keyframes text-shimmer {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+/* Custom Cyber Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #030712;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 245, 255, 0.1);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #0ea5e9;
+  box-shadow: 0 0 10px #00f5ff;
+}
+
+/* Keyframe Animations */
+@keyframes pulse-subtle {
+  0%, 100% {
+    opacity: 0.45;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(1.04);
+  }
+}
+
+@keyframes float-slow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(0.6deg);
+  }
+}
+
+@keyframes float-reverse {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(10px) rotate(-0.6deg);
+  }
+}
+
+@keyframes radar-sweep {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes scanline {
+  0% {
+    top: 0%;
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.9;
+  }
+  80% {
+    opacity: 0.9;
+  }
+  100% {
+    top: 100%;
+    opacity: 0;
+  }
+}
+
+@keyframes ripple-ring {
+  0% {
+    transform: scale(0.75);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(2.4);
+    opacity: 0;
+  }
+}
+
+@keyframes laser-glow {
+  0%, 100% {
+    box-shadow: 0 0 10px #00f5ff, 0 0 25px #0ea5e9, 0 0 40px #6366f1;
+  }
+  50% {
+    box-shadow: 0 0 18px #00f5ff, 0 0 35px #00f5ff, 0 0 55px #6366f1;
+  }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 4s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: float-slow 6s ease-in-out infinite;
+}
+
+.animate-float-reverse {
+  animation: float-reverse 7s ease-in-out infinite;
+}
+
+.animate-radar-sweep {
+  animation: radar-sweep 7s linear infinite;
+}
+
+.animate-laser-glow {
+  animation: laser-glow 2.5s ease-in-out infinite;
+}
+
+.animate-ripple {
+  animation: ripple-ring 3.2s cubic-bezier(0.1, 0.8, 0.3, 1) infinite;
+}
+
+/* Border Beam Holographic Hover Light Sweep */
+.border-beam-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.border-beam-container::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    transparent,
+    rgba(0, 245, 255, 0.5),
+    transparent 35%
+  );
+  animation: radar-sweep 5s linear infinite;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.border-beam-container:hover::before {
+  opacity: 1;
+}
+
+.border-beam-content {
+  position: relative;
+  z-index: 1;
+  background: inherit;
+  border-radius: inherit;
+}

@@ -1,0 +1,72 @@
+{
+  "entities": {
+    "UserProfile": {
+      "title": "User Profile",
+      "description": "User profile information",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "maxLength": 128
+        },
+        "displayName": {
+          "type": "string",
+          "maxLength": 120
+        },
+        "email": {
+          "type": "string",
+          "maxLength": 160
+        },
+        "photoURL": {
+          "type": "string",
+          "maxLength": 500
+        },
+        "createdAt": {
+          "type": "string",
+          "maxLength": 64
+        }
+      },
+      "required": ["id", "email"]
+    },
+    "AssessmentRecord": {
+      "title": "Assessment Record",
+      "description": "Saved cyber hygiene assessment result",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "maxLength": 128
+        },
+        "userId": {
+          "type": "string",
+          "maxLength": 128
+        },
+        "overallScore": {
+          "type": "number"
+        },
+        "level": {
+          "type": "string",
+          "maxLength": 64
+        },
+        "answers": {
+          "type": "object"
+        },
+        "completedAt": {
+          "type": "string",
+          "maxLength": 64
+        }
+      },
+      "required": ["id", "userId", "overallScore", "level", "completedAt"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "UserProfile",
+      "description": "User profile document"
+    },
+    "/users/{userId}/assessments/{assessmentId}": {
+      "schema": "AssessmentRecord",
+      "description": "Saved assessments for an authenticated user"
+    }
+  }
+}

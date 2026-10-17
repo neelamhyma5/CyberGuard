@@ -1,0 +1,6 @@
+{
+  "name": "CyberGuard - Cyber Hygiene Score Calculator",
+  "description": "Evaluate your digital security habits and get an actionable Cyber Hygiene Score with tailored security recommendations.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
