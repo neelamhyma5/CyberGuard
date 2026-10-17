@@ -1,20 +1,76 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# 🛡️ CyberGuard — Cyber Hygiene Score Calculator
 
-# Run and deploy your AI Studio app
+CyberGuard is a web application that helps users assess their cyber hygiene practices, understand potential security weaknesses, and receive recommendations for improving their online safety.
 
-This contains everything you need to run your app locally.
+## 🌐 Live Demo
 
-View your app in AI Studio: https://ai.studio/apps/a38702be-5043-42a0-ba22-a9de138c1325
+**Try CyberGuard here:**  
+https://cyberguard-cyber-hygiene-score-calculator-384282334976.asia-southeast1.run.app
 
-## Run Locally
+## ✨ Features
 
-**Prerequisites:**  Node.js
+- Cyber hygiene assessment
+- Cybersecurity score calculation
+- Personalized security recommendations
+- Cybersecurity awareness tips
+- Firebase integration for supported application features
 
+## 🛠️ Technologies Used
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+- React
+- TypeScript
+- Vite
+- Firebase
+- Google Gemini API (if enabled in the application)
+
+## 🚀 Run Locally
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/)
+- npm
+- A Gemini API key if required by the application
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/neelamhyma5/CyberGuard.git
+   ```
+
+2. Navigate to the project folder:
+
+   ```bash
+   cd CyberGuard
+   ```
+
+3. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+4. Configure the required environment variables in a local `.env.local` file. Add your own Gemini API key if the application requires it.
+
+   **Never commit API keys or other secrets to GitHub.**
+
+5. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+6. Open the local URL displayed in your terminal.
+
+## 📂 Repository
+
+GitHub: https://github.com/neelamhyma5/CyberGuard
+
+## 👥 Team
+
+Developed collaboratively by the CyberGuard project team.
+
+## 📄 License
+
+No license has been specified yet. Please add a license before allowing others to reuse or distribute the project.
